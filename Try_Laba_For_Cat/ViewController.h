@@ -9,6 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 
-@interface ViewController : UIViewController
+
+@import GoogleMobileAds;
+@import iAd;
+
+@interface ViewController : UIViewController<ADBannerViewDelegate, GADInterstitialDelegate>{
+    
+}
+
+-(void)removeAd;
+-(void)addMoney:(int)money;
 
 @end

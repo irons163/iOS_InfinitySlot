@@ -10,4 +10,19 @@
 
 @interface MyScene : SKScene
 
+typedef void(^gameOverDialog)(int, int);
+@property (atomic, copy) gameOverDialog onGameOver;
+typedef void(^admob)();
+@property (atomic, copy) admob showAdmob;
+typedef void(^buyView)();
+@property (atomic, copy) buyView showBuyViewController;
+
+
+@property (nonatomic) NSTimeInterval lastSpawnTimeInterval;
+@property (nonatomic) NSTimeInterval lastUpdateTimeInterval;
+
+-(void)stop;
+
+-(void)addMoney:(int)money;
+
 @end
