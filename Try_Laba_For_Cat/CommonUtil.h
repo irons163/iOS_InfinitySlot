@@ -22,7 +22,9 @@
 @property (atomic, assign) int labaViewHeight;
 @property (atomic, assign) int labaOffsetX;
 @property (atomic, assign) bool isPurchased;
-@property (atomic, assign) bool isBillDebug;
+//@property (atomic, assign) bool isBillDebug;
+@property (atomic, assign) bool isFreeVersion;
+@property (atomic, assign) bool isDuringOneDay;
 
 + (id)sharedInstance;
 

@@ -27,7 +27,9 @@ static CommonUtil* instance;
 //        int labaViewHeight;
 //        int labaOffsetX;
         self.isPurchased = false;
-        self.isBillDebug = true;
+//        self.isBillDebug = true;
+        self.isFreeVersion = false;
+        self.isDuringOneDay = false;
     }
     return self;
 }

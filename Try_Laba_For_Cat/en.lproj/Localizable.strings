@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  InfinitySlot
+
+  Created by irons on 2015/7/8.
+  Copyright (c) 2015年 irons. All rights reserved.
+*/
+
+"get6000Coin" = "Get 6000 coin";
+"get35000Coin" = "Get 35000 coin";
+"get85000Coin" = "Get 85000 coin";
+"get225000Coin" = "Get 225000 coin";
+"get500000Coin" = "Get 500000 coin";
+
+"Level" = "Level:";
+"Coin" = "Coin:";

@@ -130,6 +130,7 @@
 }
 
 - (IBAction)giftClick:(id)sender {
+    
     if ([MFMailComposeViewController canSendMail]) {
         NSString *path = [[NSBundle mainBundle] bundlePath];
         NSString *finalPath = [path stringByAppendingPathComponent:@"Info.plist"];

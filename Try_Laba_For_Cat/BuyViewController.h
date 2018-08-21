@@ -15,8 +15,16 @@
 }
 
 @property ViewController * viewController;
+@property (strong, nonatomic) IBOutlet UILabel *item5000Label;
+@property (strong, nonatomic) IBOutlet UILabel *item30000Label;
+@property (strong, nonatomic) IBOutlet UILabel *item65000Label;
+@property (strong, nonatomic) IBOutlet UILabel *item175000Label;
+@property (strong, nonatomic) IBOutlet UILabel *item375000Label;
+@property (strong, nonatomic) IBOutlet UILabel *item850000Label;
+@property (strong, nonatomic) IBOutlet UILabel *item850000RemoveAdLabel;
 @property (strong, nonatomic) IBOutlet UIButton *restoreBtn;
 @property (strong, nonatomic) IBOutlet UIButton *buy5000Btn;
+@property (strong, nonatomic) IBOutlet UIButton *buy850000Btn;
 - (IBAction)buy5000Click:(id)sender;
 - (IBAction)buy30000Click:(id)sender;
 - (IBAction)buy65000Click:(id)sender;

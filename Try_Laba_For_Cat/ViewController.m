@@ -11,6 +11,8 @@
 #import "GameOverViewController.h"
 #import "BuyViewController.h"
 #import "CommonUtil.h"
+#import "GameCenterUtil.h"
+#import "HintViewController.h"
 
 @implementation ViewController{
     ADBannerView * adBannerView;
@@ -22,7 +24,7 @@
 {
     [super viewDidLoad];
     
-    adBannerView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, -50, 200, 30)];
+    adBannerView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - 50, 200, 30)];
     adBannerView.delegate = self;
     adBannerView.alpha = 1.0f;
     [self.view addSubview:adBannerView];
@@ -39,6 +41,9 @@
     ((CommonUtil*)[CommonUtil sharedInstance]).isPurchased = [[NSUserDefaults standardUserDefaults] boolForKey:@"isPurchased"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
+    if(!((CommonUtil*)[CommonUtil sharedInstance]).isFreeVersion)
+        ((CommonUtil*)[CommonUtil sharedInstance]).isPurchased = true;
+    
     if(areAdsRemoved){
         [self.view setBackgroundColor:[UIColor blueColor]];
         //if they did buy it, set the background to blue, if your using the code above to set the background to blue, if your removing ads, your going to have to make your own code here
@@ -46,8 +51,8 @@
     
     // Configure the view.
     SKView * skView = (SKView *)self.view;
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
+//    skView.showsFPS = YES;
+//    skView.showsNodeCount = YES;
     
     // Create and configure the scene.
     scene = [MyScene sceneWithSize:skView.bounds.size];
@@ -65,8 +70,31 @@
         [self showBuyViewController];
     };
     
+    scene.showRankView = ^(){
+        [self showRankView];
+    };
+    
+    scene.showHintView = ^(){
+        [self showHintView];
+    };
+    
     // Present the scene.
     [skView presentScene:scene];
+    
+    GameCenterUtil * gameCenterUtil = [GameCenterUtil sharedInstance];
+    //    gameCenterUtil.delegate = self;
+    [gameCenterUtil isGameCenterAvailable];
+    [gameCenterUtil authenticateLocalUser:self];
+    [gameCenterUtil submitAllSavedScores];
+}
+
+-(void) showRankView{
+    GameCenterUtil * gameCenterUtil = [GameCenterUtil sharedInstance];
+    //    gameCenterUtil.delegate = self;
+    [gameCenterUtil isGameCenterAvailable];
+    //    [gameCenterUtil authenticateLocalUser:self];
+    [gameCenterUtil showGameCenter:self];
+    [gameCenterUtil submitAllSavedScores];
 }
 
 -(void) gameOverWithLose:(int)gameLevel withGameTime:(int)gameTime{
@@ -104,6 +132,14 @@
     buyViewController.viewController = self;
     self.navigationController.modalPresentationStyle = UIModalPresentationCurrentContext;
     [self.navigationController presentViewController:buyViewController animated:YES completion:^{
+    }];
+}
+
+-(void) showHintView{
+    HintViewController* hintViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"HintViewController"];
+//    hintViewController.viewController = self;
+    self.navigationController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    [self.navigationController presentViewController:hintViewController animated:YES completion:^{
     }];
 }
 
@@ -152,6 +188,35 @@
 
 -(void)addMoney:(int)money{
     [scene addMoney:money];
+}
+
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner{
+    [self layoutAnimated:true];
+}
+
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
+    [self layoutAnimated:true];
+}
+
+- (void)layoutAnimated:(BOOL)animated
+{
+    CGRect contentFrame = self.view.bounds;
+    CGRect bannerFrame = adBannerView.frame;
+    if (adBannerView.bannerLoaded)
+    {
+        //        contentFrame.size.height -= adBannerView.frame.size.height;
+        contentFrame.size.height = 0;
+//        bannerFrame.origin.y = contentFrame.size.height;
+        bannerFrame.origin.y = self.view.bounds.size.height - 50;
+    } else {
+        bannerFrame.origin.y = contentFrame.size.height;
+    }
+    
+    [UIView animateWithDuration:animated ? 0.25 : 0.0 animations:^{
+        adBannerView.frame = contentFrame;
+        [adBannerView layoutIfNeeded];
+        adBannerView.frame = bannerFrame;
+    }];
 }
 
 @end

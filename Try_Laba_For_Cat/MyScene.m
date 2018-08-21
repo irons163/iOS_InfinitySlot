@@ -12,10 +12,11 @@
 #import "RuleUtil.h"
 #import "MyDefine.h"
 #import "MyUtils.h"
+#import "GameCenterUtil.h"
 
 #define DEFAULT_HP  2
 
-const bool TEST_LABA_PRIZE =true;
+const bool TEST_LABA =false;
 
 bool isCanPressStartBtn = true;
 bool isCanPressStopBtn = false;
@@ -29,8 +30,8 @@ bool isLabaSitck3Run = false;
 const int MONEY_COIN_10 = 10;
 const int MONEY_COIN_30 = 30;
 const int MONEY_COIN_50 = 50;
-const static int MONEY_INIT = 2000;
-const static int MONEY_INIT_EVERYDAY = 1000;
+const static int MONEY_INIT = 5000;
+const static int MONEY_INIT_EVERYDAY = 5000;
 
 int currentMoneyLevel = MONEY_COIN_10;
 static int currentMoney = MONEY_INIT;
@@ -168,6 +169,7 @@ const int fallWithCoinsNumber = 30;
     MyADView * myAdView;
     SKSpriteNode * storeBtn;
     CommonUtil * commonUtil;
+    SKSpriteNode * currentMoneyNode;
     
     NSMutableArray * winFrameArray;
     NSMutableArray * winLineArray;
@@ -187,6 +189,8 @@ const int fallWithCoinsNumber = 30;
     NSMutableArray * fallWithCoinsY;
     
     float alldistanceXForPerMove;
+    SKSpriteNode * rankBtn;
+    SKSpriteNode * hintBtn;
 }
 
 
@@ -207,6 +211,8 @@ const int fallWithCoinsNumber = 30;
         
         [self loadMoney];
         
+        [self makeUpMoney];
+        
         backgroundNode = [SKSpriteNode spriteNodeWithImageNamed:@"laba_bg.jpg"];
         backgroundNode.size = CGSizeMake(self.frame.size.width, self.frame.size.height);
         backgroundNode.position = CGPointMake(0, 0);
@@ -223,6 +229,14 @@ const int fallWithCoinsNumber = 30;
         storeBtn.size = CGSizeMake((self.size.width - myAdView.size.width)/2.0f, myAdView.size.height);
         storeBtn.position = CGPointMake(myAdView.position.x + myAdView.size.width/2.0f + storeBtn.size.width/2.0f, myAdView.position.y);
         [self addChild:storeBtn];
+        
+        rankBtn = [SKSpriteNode spriteNodeWithImageNamed:@"leader_board_btn"];
+        rankBtn.size = CGSizeMake((self.size.width - myAdView.size.width)/2.0f, myAdView.size.height);
+//        rankBtn.anchorPoint = CGPointMake(0, 0);
+        rankBtn.position = CGPointMake(rankBtn.size.width/2.0f, myAdView.position.y);
+        [self addChild:rankBtn];
+        
+        
         
         labaFrameNode = [SKSpriteNode spriteNodeWithImageNamed:@"laba_fg"];
         labaFrameNode.size = CGSizeMake(self.frame.size.width, self.frame.size.height);
@@ -249,14 +263,35 @@ const int fallWithCoinsNumber = 30;
         labaStickNode3.size = CGSizeMake(self.frame.size.width/3.6f, self.frame.size.height*2);
         
         startBtn = [SKSpriteNode spriteNodeWithImageNamed:@"start_btn1"];
-        startBtn.size = CGSizeMake(100, 100);
-        startBtn.position = CGPointMake(self.size.width/2.0, startBtn.size.height/2.0f);
+        
+        
+        if ([[UIScreen mainScreen] bounds].size.height>480.0f)
+        {
+            NSLog(@"App is running on iPhone with screen 4+ inch");
+            startBtn.size = CGSizeMake(100, 100);
+            startBtn.position = CGPointMake(self.size.width/2.0, startBtn.size.height/2.0f  +50);
+        }else{
+            NSLog(@"App is running on iPhone with screen 3.5 inch");
+            startBtn.size = CGSizeMake(60, 60);
+            startBtn.position = CGPointMake(startBtn.size.width*2 , startBtn.size.height/2.0f  +50);
+        }
+        
         
         [self addChild:startBtn];
         
         stopBtn = [SKSpriteNode spriteNodeWithImageNamed:@"stop_btn1"];
-        stopBtn.size = CGSizeMake(100, 100);
-        stopBtn.position = CGPointMake(self.size.width/2.0-startBtn.size.width, stopBtn.size.height/2.0f);
+        
+        if ([[UIScreen mainScreen] bounds].size.height>480.0f)
+        {
+            NSLog(@"App is running on iPhone with screen 4+ inch");
+            stopBtn.size = CGSizeMake(100, 100);
+            stopBtn.position = CGPointMake(self.size.width/2.0-startBtn.size.width, stopBtn.size.height/2.0f +50);
+        }else{
+            NSLog(@"App is running on iPhone with screen 3.5 inch");
+            stopBtn.size = CGSizeMake(60, 60);
+            stopBtn.position = CGPointMake(startBtn.position.x-startBtn.size.width, stopBtn.size.height/2.0f +50);
+        }
+        
         
         [self addChild:stopBtn];
         
@@ -400,7 +435,7 @@ const int fallWithCoinsNumber = 30;
         textViewMoneyLevel.fontSize = 15;
         textViewMoneyLevel.fontColor = UIColorFromRGB(0x77FFEE);
         textViewMoneyLevel.position = CGPointMake(stopBtn.position.x - stopBtn.size.width/3.0f, stopBtn.position.y+stopBtn.frame.size.height/2.0f);
-        textViewMoneyLevel.text = @"等級：";
+        textViewMoneyLevel.text = NSLocalizedString(@"Level", @"");
         [self addChild:textViewMoneyLevel];
 
         textViewCurrentMonryLevel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
@@ -419,12 +454,12 @@ const int fallWithCoinsNumber = 30;
         textViewMoney.fontSize = 15;
         textViewMoney.fontColor = UIColorFromRGB(0x77FFEE);
 //        textViewMoney.position = CGPointMake(startBtn.position.x - startBtn.size.width/2.0f, startBtn.position.y+startBtn.frame.size.height/2.0f);
-        textViewMoney.text = @"金幣：";
+        textViewMoney.text = NSLocalizedString(@"Coin", @"");
 //        [self addChild:textViewMoney];
         money.position = CGPointMake(textViewCurrentMonryLevel.position.x + textViewCurrentMonryLevel.frame.size.width + textViewMoney.frame.size.width/2, startBtn.position.y+startBtn.frame.size.height/2.0f);
         [money addChild:textViewMoney];
         
-        SKSpriteNode * currentMoneyNode = [SKSpriteNode node];
+        currentMoneyNode = [SKSpriteNode node];
         currentMoneyNode.anchorPoint = CGPointMake(0, 0);
         [self addChild:currentMoneyNode];
         
@@ -436,6 +471,12 @@ const int fallWithCoinsNumber = 30;
         currentMoneyNode.position = CGPointMake(money.position.x + textViewMoney.frame.size.width/2 + textViewCurrentMoney.frame.size.width/2, money.position.y);
 //        [self addChild:textViewCurrentMoney];
         [currentMoneyNode addChild:textViewCurrentMoney];
+        
+        hintBtn = [SKSpriteNode spriteNodeWithImageNamed:@"btn_guide_hd"];
+        hintBtn.size = CGSizeMake(35, 35);
+                hintBtn.anchorPoint = CGPointMake(0, 0);
+        hintBtn.position = CGPointMake(coin50Btn.position.x + coin50Btn.size.width/2.0f, coin50Btn.position.y);
+        [self addChild:hintBtn];
         
         [self initWinFrameAndLine];
         
@@ -474,6 +515,8 @@ const int fallWithCoinsNumber = 30;
     
     UITouch * touch = [touches anyObject];
     CGPoint location = [touch locationInNode:self];
+    
+    [self makeUpMoney];
     
     if (CGRectContainsPoint(coin10Btn.calculateAccumulatedFrame, location))
     {
@@ -578,6 +621,10 @@ const int fallWithCoinsNumber = 30;
     }else if(CGRectContainsPoint(storeBtn.calculateAccumulatedFrame, location)){
         storeBtn.texture = storeBtnClickTextureArray[PRESSED_TEXTURE_INDEX];
         [self displayBuyView];
+    }else if(CGRectContainsPoint(rankBtn.calculateAccumulatedFrame, location)){
+        self.showRankView();
+    }else if(CGRectContainsPoint(hintBtn.calculateAccumulatedFrame, location)){
+        self.showHintView();
     }
 }
 
@@ -949,7 +996,7 @@ int lineCount = 0;
         return;
     }
     
-    if(TEST_LABA_PRIZE)
+    if(TEST_LABA)
         [self test];
     
     bool big_win = false;
@@ -1087,9 +1134,13 @@ int lineCount = 0;
     }
     
     currentMoney += win_money;
+    float w = textViewCurrentMoney.frame.size.width;
     textViewCurrentMoney.text = [NSString stringWithFormat:@"%d", currentMoney];
+    currentMoneyNode.position = CGPointMake(currentMoneyNode.position.x -w/2 + textViewCurrentMoney.frame.size.width/2, currentMoneyNode.position.y);
     
     [MyScene saveMoney];
+    
+    [self reportScore];
     
     int delayTime = 0;
     if(iswin){
@@ -1128,7 +1179,8 @@ int lineCount = 0;
 -(void)loadMoney{
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     currentMoney = [userDefaults integerForKey:moneyField];
-    currentMoney = 2000;
+    if(TEST_LABA)
+        currentMoney = 10;
 }
 
 +(void)saveMoney{
@@ -1717,16 +1769,39 @@ private void doAutoStopLabaStick(){
 
 -(void)costMoneyWithCurrentMoneyLevel{
     currentMoney -= currentMoneyLevel;
+    float w = textViewCurrentMoney.frame.size.width;
     textViewCurrentMoney.text = [NSString stringWithFormat:@"%d", currentMoney];
+    currentMoneyNode.position = CGPointMake(currentMoneyNode.position.x -w/2 + textViewCurrentMoney.frame.size.width/2, currentMoneyNode.position.y);
     
     [MyScene saveMoney];
 }
 
 -(void)addMoney:(int)money{
     currentMoney += money;
+    float w = textViewCurrentMoney.frame.size.width;
     textViewCurrentMoney.text = [NSString stringWithFormat:@"%d", currentMoney];
+    currentMoneyNode.position = CGPointMake(currentMoneyNode.position.x -w/2 + textViewCurrentMoney.frame.size.width/2, currentMoneyNode.position.y);
     
     [MyScene saveMoney];
+    
+    [self reportScore];
+}
+
+-(void)makeUpMoney{
+    if(commonUtil.isDuringOneDay){
+        commonUtil.isDuringOneDay = false;
+        if(currentMoney < MONEY_INIT_EVERYDAY){
+            currentMoney = MONEY_INIT_EVERYDAY;
+            float w = textViewCurrentMoney.frame.size.width;
+            textViewCurrentMoney.text = [NSString stringWithFormat:@"%d", currentMoney];
+            currentMoneyNode.position = CGPointMake(currentMoneyNode.position.x -w/2 + textViewCurrentMoney.frame.size.width/2, currentMoneyNode.position.y);
+            [MyScene saveMoney];
+            UIAlertView* alertView = [UIAlertView alloc];
+            alertView = [alertView initWithTitle:@"" message:@"Make up money to 5000." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alertView show];
+//            [self.view addSubview:alertView];
+        }
+    }
 }
 
 -(void)displayAD{
@@ -1735,6 +1810,19 @@ private void doAutoStopLabaStick(){
 
 -(void)displayBuyView{
     self.showBuyViewController();
+}
+
++(NSString *)moneyField{
+    return moneyField;
+}
+
++(int)MONEY_INIT{
+    return MONEY_INIT;
+}
+
+-(void)reportScore{
+    GameCenterUtil * gameCenterUtil = [GameCenterUtil sharedInstance];
+    [gameCenterUtil reportScore:currentMoney forCategory:@"com.irons.InfiniteSlotMoney"];
 }
 
 -(void)update:(CFTimeInterval)currentTime {

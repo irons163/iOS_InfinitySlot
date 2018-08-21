@@ -20,6 +20,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    if(!((CommonUtil*)[CommonUtil sharedInstance]).isFreeVersion){
+        self.item5000Label.text = NSLocalizedString(@"get6000Coin", @"");
+        self.item30000Label.text = NSLocalizedString(@"get35000Coin", @"");
+        self.item65000Label.text = NSLocalizedString(@"get85000Coin", @"");
+        self.item175000Label.text = NSLocalizedString(@"get225000Coin", @"");
+        self.item375000Label.text = NSLocalizedString(@"get500000Coin", @"");
+        self.item850000Label.hidden = true;
+        self.item850000RemoveAdLabel.hidden = true;
+        self.buy850000Btn.hidden = true;
+        self.restoreBtn.hidden = true;
+    }
+    
     [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
 }
 
@@ -57,6 +70,12 @@
 #define k375000RemoveAdsProductIdentifier @"com.irons.infinity.coin375000AndRemoveAds"
 #define k850000RemoveAdsProductIdentifier @"com.irons.infinity.coin850000AndRemoveAds"
 
+#define k6000RemoveAdsProductIdentifier @"com.irons.infinity.coin6000"
+#define k35000RemoveAdsProductIdentifier @"com.irons.infinity.coin35000"
+#define k85000RemoveAdsProductIdentifier @"com.irons.infinity.coin85000"
+#define k225000RemoveAdsProductIdentifier @"com.irons.infinity.coin225000"
+#define k500000RemoveAdsProductIdentifier @"com.irons.infinity.coin500000"
+
 const int clickRestorebtn = -1;
 const int click5000btn = 0;
 const int click30000btn = 1;
@@ -67,14 +86,37 @@ const int click850000btn = 5;
 
 
 
+
+
 - (IBAction)tapsRemoveAdsButton{
     NSLog(@"User requests to remove ads");
     
     if([SKPaymentQueue canMakePayments]){
         NSLog(@"User can make payments");
         
-        [self doRestore];
-        
+        if(((CommonUtil*)[CommonUtil sharedInstance]).isFreeVersion){
+            [self doRestore];
+        }else{
+            
+            NSString * str = nil;
+            if (currentClick==click5000btn) {
+                str = k6000RemoveAdsProductIdentifier;
+            }else if(currentClick==click30000btn){
+                str = k35000RemoveAdsProductIdentifier;
+            }else if(currentClick==click65000btn){
+                str = k85000RemoveAdsProductIdentifier;
+            }else if(currentClick==click175000btn){
+                str = k225000RemoveAdsProductIdentifier;
+            }else if(currentClick==click375000btn){
+                str = k500000RemoveAdsProductIdentifier;
+            }else{
+                return;
+            }
+            
+            SKProductsRequest *productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithObject:str]];
+            productsRequest.delegate = self;
+            [productsRequest start];
+        }
 //        SKProductsRequest *productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithObject:kRemoveAdsProductIdentifier]];
         
         /*
@@ -153,6 +195,7 @@ const int click850000btn = 5;
     
     if(queue.transactions.count==0 && !((CommonUtil*)[CommonUtil sharedInstance]).isPurchased){
         NSString * str = nil;
+        
         if (currentClick==click5000btn) {
             str = kFirst5000RemoveAdsProductIdentifier;
         }else if(currentClick==click30000btn){
@@ -168,6 +211,7 @@ const int click850000btn = 5;
         }else {
             return;
         }
+        
         SKProductsRequest *productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithObject:str]];
         productsRequest.delegate = self;
         [productsRequest start];
@@ -185,21 +229,25 @@ const int click850000btn = 5;
         }
     
         NSString * str = nil;
-        if (currentClick==click5000btn) {
-            str = k5000RemoveAdsProductIdentifier;
-        }else if(currentClick==click30000btn){
-            str = k30000RemoveAdsProductIdentifier;
-        }else if(currentClick==click65000btn){
-            str = k65000RemoveAdsProductIdentifier;
-        }else if(currentClick==click175000btn){
-            str = k175000RemoveAdsProductIdentifier;
-        }else if(currentClick==click375000btn){
-            str = k375000RemoveAdsProductIdentifier;
-        }else if(currentClick==click850000btn){
-            str = k850000RemoveAdsProductIdentifier;
-        }else{
-            return;
+        
+        if(!((CommonUtil*)[CommonUtil sharedInstance]).isFreeVersion){
+            if (currentClick==click5000btn) {
+                str = k5000RemoveAdsProductIdentifier;
+            }else if(currentClick==click30000btn){
+                str = k30000RemoveAdsProductIdentifier;
+            }else if(currentClick==click65000btn){
+                str = k65000RemoveAdsProductIdentifier;
+            }else if(currentClick==click175000btn){
+                str = k175000RemoveAdsProductIdentifier;
+            }else if(currentClick==click375000btn){
+                str = k375000RemoveAdsProductIdentifier;
+            }else if(currentClick==click850000btn){
+                str = k850000RemoveAdsProductIdentifier;
+            }else{
+                return;
+            }
         }
+        
         SKProductsRequest *productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithObject:str]];
         productsRequest.delegate = self;
         [productsRequest start];
@@ -265,30 +313,46 @@ const int click850000btn = 5;
 }
 
 -(void)checkMoneyAndAdd:(SKPaymentTransaction*) transaction{
-    if([transaction.payment.productIdentifier isEqualToString:kFirst5000RemoveAdsProductIdentifier] ||
-       [transaction.payment.productIdentifier isEqualToString:k5000RemoveAdsProductIdentifier]){
+    if(!((CommonUtil*)[CommonUtil sharedInstance]).isFreeVersion){
         
-        [self addMoney:5000];
-    }else if([transaction.payment.productIdentifier isEqualToString:kFirst30000RemoveAdsProductIdentifier] ||
-             [transaction.payment.productIdentifier isEqualToString:k30000RemoveAdsProductIdentifier]){
-        
-        [self addMoney:30000];
-    }else if([transaction.payment.productIdentifier isEqualToString:kFirst65000RemoveAdsProductIdentifier] ||
-             [transaction.payment.productIdentifier isEqualToString:k65000RemoveAdsProductIdentifier]){
-        
-        [self addMoney:65000];
-    }else if([transaction.payment.productIdentifier isEqualToString:kFirst175000RemoveAdsProductIdentifier] ||
-             [transaction.payment.productIdentifier isEqualToString:k175000RemoveAdsProductIdentifier]){
-        
-        [self addMoney:175000];
-    }else if([transaction.payment.productIdentifier isEqualToString:kFirst375000RemoveAdsProductIdentifier] ||
-             [transaction.payment.productIdentifier isEqualToString:k375000RemoveAdsProductIdentifier]){
-        
-        [self addMoney:375000];
-    }else if([transaction.payment.productIdentifier isEqualToString:kFirst850000RemoveAdsProductIdentifier] ||
-             [transaction.payment.productIdentifier isEqualToString:k850000RemoveAdsProductIdentifier]){
-        
-        [self addMoney:850000];
+        if([transaction.payment.productIdentifier isEqualToString:k6000RemoveAdsProductIdentifier]){
+            
+            [self addMoney:6000];
+        }else if([transaction.payment.productIdentifier isEqualToString:k35000RemoveAdsProductIdentifier]){
+            
+            [self addMoney:35000];
+        }else if([transaction.payment.productIdentifier isEqualToString:k85000RemoveAdsProductIdentifier]){
+            
+            [self addMoney:85000];
+        }else if([transaction.payment.productIdentifier isEqualToString:k225000RemoveAdsProductIdentifier]){
+            
+            [self addMoney:225000];
+        }else if([transaction.payment.productIdentifier isEqualToString:k500000RemoveAdsProductIdentifier]){
+            
+            [self addMoney:500000];
+        }
+    }else{
+        if([transaction.payment.productIdentifier isEqualToString:kFirst5000RemoveAdsProductIdentifier] ||
+           [transaction.payment.productIdentifier isEqualToString:k5000RemoveAdsProductIdentifier]){
+            
+            [self addMoney:6000];
+        }else if([transaction.payment.productIdentifier isEqualToString:kFirst30000RemoveAdsProductIdentifier] ||
+                 [transaction.payment.productIdentifier isEqualToString:k30000RemoveAdsProductIdentifier]){
+            
+            [self addMoney:35000];
+        }else if([transaction.payment.productIdentifier isEqualToString:kFirst65000RemoveAdsProductIdentifier] ||
+                 [transaction.payment.productIdentifier isEqualToString:k65000RemoveAdsProductIdentifier]){
+            
+            [self addMoney:85000];
+        }else if([transaction.payment.productIdentifier isEqualToString:kFirst175000RemoveAdsProductIdentifier] ||
+                 [transaction.payment.productIdentifier isEqualToString:k175000RemoveAdsProductIdentifier]){
+            
+            [self addMoney:225000];
+        }else if([transaction.payment.productIdentifier isEqualToString:kFirst375000RemoveAdsProductIdentifier] ||
+                 [transaction.payment.productIdentifier isEqualToString:k375000RemoveAdsProductIdentifier]){
+            
+            [self addMoney:500000];
+        }
     }
 }
 

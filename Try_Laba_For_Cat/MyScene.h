@@ -16,6 +16,10 @@ typedef void(^admob)();
 @property (atomic, copy) admob showAdmob;
 typedef void(^buyView)();
 @property (atomic, copy) buyView showBuyViewController;
+typedef void(^rankView)();
+@property (atomic, copy) rankView showRankView;
+typedef void(^hintView)();
+@property (atomic, copy) hintView showHintView;
 
 
 @property (nonatomic) NSTimeInterval lastSpawnTimeInterval;
@@ -24,5 +28,9 @@ typedef void(^buyView)();
 -(void)stop;
 
 -(void)addMoney:(int)money;
+
++(NSString*)moneyField;
+
++(int)MONEY_INIT;
 
 @end
