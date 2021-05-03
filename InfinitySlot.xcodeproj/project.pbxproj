@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69CA96CDAF658886C2F33E9E /* Pods_InfinitySlotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC411956061E74EBC83A226 /* Pods_InfinitySlotTests.framework */; };
+		7842FF3478B09D8285FB1CFD /* Pods_InfinitySlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A020BD5498A38195603D6667 /* Pods_InfinitySlot.framework */; };
 		B53E30491B1AA17C00B7457E /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E58D641AE1C459009385F0 /* MyScene.m */; };
 		B53E304A1B1AA17C00B7457E /* MyADView.m in Sources */ = {isa = PBXBuildFile; fileRef = B57795181B01FCA000ABE278 /* MyADView.m */; };
 		B53E304B1B1AA17C00B7457E /* MyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B53E30391B193F7F00B7457E /* MyUtils.m */; };
@@ -22,7 +24,6 @@
 		B53E30561B1AA17C00B7457E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53E303F1B19C6EE00B7457E /* StoreKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		B53E30571B1AA17C00B7457E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E58D4B1AE1C459009385F0 /* CoreGraphics.framework */; };
 		B53E30581B1AA17C00B7457E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E58D4D1AE1C459009385F0 /* UIKit.framework */; };
-		B53E30591B1AA17C00B7457E /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53E30361B193A3E00B7457E /* GoogleMobileAds.framework */; };
 		B53E305A1B1AA17C00B7457E /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E58D4F1AE1C459009385F0 /* SpriteKit.framework */; };
 		B53E305B1B1AA17C00B7457E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E58D491AE1C459009385F0 /* Foundation.framework */; };
 		B53E305D1B1AA17C00B7457E /* coin_50_btn02.png in Resources */ = {isa = PBXBuildFile; fileRef = B5E58DBB1AE1C556009385F0 /* coin_50_btn02.png */; };
@@ -126,8 +127,22 @@
 		B5E58D7C1AE1C459009385F0 /* Try_Laba_For_CatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E58D7B1AE1C459009385F0 /* Try_Laba_For_CatTests.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B5C6154A263DA2DD00CFDD98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5E58D3E1AE1C459009385F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B53E30471B1AA17C00B7457E;
+			remoteInfo = InfinitySlot;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		B53E30361B193A3E00B7457E /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		6BC411956061E74EBC83A226 /* Pods_InfinitySlotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InfinitySlotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C3070F925E4AB193033C3C1 /* Pods-InfinitySlotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfinitySlotTests.debug.xcconfig"; path = "Target Support Files/Pods-InfinitySlotTests/Pods-InfinitySlotTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7333B7296DE8D72F09535991 /* Pods-InfinitySlotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfinitySlotTests.release.xcconfig"; path = "Target Support Files/Pods-InfinitySlotTests/Pods-InfinitySlotTests.release.xcconfig"; sourceTree = "<group>"; };
+		A020BD5498A38195603D6667 /* Pods_InfinitySlot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InfinitySlot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B12932226FBBD9E4DE6C9069 /* Pods-InfinitySlot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfinitySlot.debug.xcconfig"; path = "Target Support Files/Pods-InfinitySlot/Pods-InfinitySlot.debug.xcconfig"; sourceTree = "<group>"; };
 		B53E30381B193F7F00B7457E /* MyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUtils.h; sourceTree = "<group>"; };
 		B53E30391B193F7F00B7457E /* MyUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUtils.m; sourceTree = "<group>"; };
 		B53E303B1B1941D300B7457E /* laba.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = laba.mp3; sourceTree = "<group>"; };
@@ -136,7 +151,6 @@
 		B53E30441B19E7BD00B7457E /* BuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyViewController.h; sourceTree = "<group>"; };
 		B53E30451B19E7BD00B7457E /* BuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyViewController.m; sourceTree = "<group>"; };
 		B53E30931B1AA17C00B7457E /* InfinitySlot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfinitySlot.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B53E30941B1AA17D00B7457E /* Try_Laba_For_Cat copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Try_Laba_For_Cat copy-Info.plist"; path = "/Users/irons/Desktop/Try_Laba_For_Cat/Try_Laba_For_Cat copy-Info.plist"; sourceTree = "<absolute>"; };
 		B55E95BA1BC61971002E67EF /* unlimited_cat_world_ad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlimited_cat_world_ad.png; sourceTree = "<group>"; };
 		B55E95BB1BC61971002E67EF /* UnlimitedCatWorld_ad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UnlimitedCatWorld_ad.png; sourceTree = "<group>"; };
 		B55E95BC1BC61971002E67EF /* ad1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ad1.jpg; sourceTree = "<group>"; };
@@ -286,6 +300,7 @@
 		B5E58DC51AE1C556009385F0 /* stop_btn2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop_btn2.png; sourceTree = "<group>"; };
 		B5E58DC61AE1C556009385F0 /* text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text.png; sourceTree = "<group>"; };
 		B5E58DC71AE1C556009385F0 /* win_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_frame.png; sourceTree = "<group>"; };
+		F4E63779E81555984329C47D /* Pods-InfinitySlot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfinitySlot.release.xcconfig"; path = "Target Support Files/Pods-InfinitySlot/Pods-InfinitySlot.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,9 +313,9 @@
 				B53E30561B1AA17C00B7457E /* StoreKit.framework in Frameworks */,
 				B53E30571B1AA17C00B7457E /* CoreGraphics.framework in Frameworks */,
 				B53E30581B1AA17C00B7457E /* UIKit.framework in Frameworks */,
-				B53E30591B1AA17C00B7457E /* GoogleMobileAds.framework in Frameworks */,
 				B53E305A1B1AA17C00B7457E /* SpriteKit.framework in Frameworks */,
 				B53E305B1B1AA17C00B7457E /* Foundation.framework in Frameworks */,
+				7842FF3478B09D8285FB1CFD /* Pods_InfinitySlot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,12 +326,24 @@
 				B5E58D701AE1C459009385F0 /* XCTest.framework in Frameworks */,
 				B5E58D721AE1C459009385F0 /* UIKit.framework in Frameworks */,
 				B5E58D711AE1C459009385F0 /* Foundation.framework in Frameworks */,
+				69CA96CDAF658886C2F33E9E /* Pods_InfinitySlotTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29D2C82C883FAD94BA706B54 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B12932226FBBD9E4DE6C9069 /* Pods-InfinitySlot.debug.xcconfig */,
+				F4E63779E81555984329C47D /* Pods-InfinitySlot.release.xcconfig */,
+				6C3070F925E4AB193033C3C1 /* Pods-InfinitySlotTests.debug.xcconfig */,
+				7333B7296DE8D72F09535991 /* Pods-InfinitySlotTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B5AFFC1A1B4243C30062ABF7 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,12 +370,11 @@
 		B5E58D3D1AE1C459009385F0 = {
 			isa = PBXGroup;
 			children = (
-				B53E30361B193A3E00B7457E /* GoogleMobileAds.framework */,
 				B5E58D511AE1C459009385F0 /* Try_Laba_For_Cat */,
 				B5E58D751AE1C459009385F0 /* Try_Laba_For_CatTests */,
 				B5E58D481AE1C459009385F0 /* Frameworks */,
 				B5E58D471AE1C459009385F0 /* Products */,
-				B53E30941B1AA17D00B7457E /* Try_Laba_For_Cat copy-Info.plist */,
+				29D2C82C883FAD94BA706B54 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -372,6 +398,8 @@
 				B5E58D4D1AE1C459009385F0 /* UIKit.framework */,
 				B5E58D4F1AE1C459009385F0 /* SpriteKit.framework */,
 				B5E58D6F1AE1C459009385F0 /* XCTest.framework */,
+				A020BD5498A38195603D6667 /* Pods_InfinitySlot.framework */,
+				6BC411956061E74EBC83A226 /* Pods_InfinitySlotTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -522,9 +550,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B53E30901B1AA17C00B7457E /* Build configuration list for PBXNativeTarget "InfinitySlot" */;
 			buildPhases = (
+				1DC4DD3D179BC6FDF076E1F1 /* [CP] Check Pods Manifest.lock */,
 				B53E30481B1AA17C00B7457E /* Sources */,
 				B53E30551B1AA17C00B7457E /* Frameworks */,
 				B53E305C1B1AA17C00B7457E /* Resources */,
+				A546B9967F0AC9CD045775CE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -539,6 +569,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5E58D821AE1C459009385F0 /* Build configuration list for PBXNativeTarget "InfinitySlotTests" */;
 			buildPhases = (
+				8C364254300928402CEA2B7A /* [CP] Check Pods Manifest.lock */,
 				B5E58D6A1AE1C459009385F0 /* Sources */,
 				B5E58D6B1AE1C459009385F0 /* Frameworks */,
 				B5E58D6C1AE1C459009385F0 /* Resources */,
@@ -546,6 +577,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B5C6154B263DA2DD00CFDD98 /* PBXTargetDependency */,
 			);
 			name = InfinitySlotTests;
 			productName = Try_Laba_For_CatTests;
@@ -563,9 +595,12 @@
 				TargetAttributes = {
 					B53E30471B1AA17C00B7457E = {
 						DevelopmentTeam = T6VV6T753H;
+						ProvisioningStyle = Automatic;
 					};
 					B5E58D6D1AE1C459009385F0 = {
-						TestTargetID = B5E58D451AE1C459009385F0;
+						DevelopmentTeam = T6VV6T753H;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B53E30471B1AA17C00B7457E;
 					};
 				};
 			};
@@ -574,6 +609,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				ar,
@@ -723,6 +759,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1DC4DD3D179BC6FDF076E1F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InfinitySlot-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C364254300928402CEA2B7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InfinitySlotTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A546B9967F0AC9CD045775CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InfinitySlot/Pods-InfinitySlot-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InfinitySlot/Pods-InfinitySlot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B53E30481B1AA17C00B7457E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -758,6 +861,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5C6154B263DA2DD00CFDD98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B53E30471B1AA17C00B7457E /* InfinitySlot */;
+			targetProxy = B5C6154A263DA2DD00CFDD98 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B55E95F21BC67201002E67EF /* Localizable.strings */ = {
@@ -844,20 +955,27 @@
 /* Begin XCBuildConfiguration section */
 		B53E30911B1AA17C00B7457E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B12932226FBBD9E4DE6C9069 /* Pods-InfinitySlot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Chuan Chang (T6VV6T753H)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wen Chuan Chang (T6VV6T753H)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1.2105030;
+				DEVELOPMENT_TEAM = T6VV6T753H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Try_Laba_For_Cat/Try_Laba_For_Cat-Prefix.pch";
-				INFOPLIST_FILE = "Try_Laba_For_Cat copy-Info.plist";
+				INFOPLIST_FILE = "Try_Laba_For_Cat/Try_Laba_For_Cat-Info.plist";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.irons.InfinitySlot;
 				PRODUCT_NAME = InfinitySlot;
 				PROVISIONING_PROFILE = "17b8dc89-77ed-42b9-bfb3-725a2c7836fb";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -865,20 +983,27 @@
 		};
 		B53E30921B1AA17C00B7457E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4E63779E81555984329C47D /* Pods-InfinitySlot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Chuan Chang (T6VV6T753H)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wen Chuan Chang (T6VV6T753H)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1.2105030;
+				DEVELOPMENT_TEAM = T6VV6T753H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Try_Laba_For_Cat/Try_Laba_For_Cat-Prefix.pch";
-				INFOPLIST_FILE = "Try_Laba_For_Cat copy-Info.plist";
+				INFOPLIST_FILE = "Try_Laba_For_Cat/Try_Laba_For_Cat-Info.plist";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.irons.InfinitySlot;
 				PRODUCT_NAME = InfinitySlot;
 				PROVISIONING_PROFILE = "17b8dc89-77ed-42b9-bfb3-725a2c7836fb";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -959,9 +1084,13 @@
 		};
 		B5E58D831AE1C459009385F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C3070F925E4AB193033C3C1 /* Pods-InfinitySlotTests.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Try_Laba_For_Cat.app/Try_Laba_For_Cat";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Chuan Chang (T6VV6T753H)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T6VV6T753H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -976,16 +1105,22 @@
 				INFOPLIST_FILE = "Try_Laba_For_CatTests/Try_Laba_For_CatTests-Info.plist";
 				PRODUCT_NAME = InfinitySlotTests;
 				PROVISIONING_PROFILE = "17b8dc89-77ed-42b9-bfb3-725a2c7836fb";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfinitySlot.app/InfinitySlot";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
 		B5E58D841AE1C459009385F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7333B7296DE8D72F09535991 /* Pods-InfinitySlotTests.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Try_Laba_For_Cat.app/Try_Laba_For_Cat";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Chuan Chang (T6VV6T753H)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T6VV6T753H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -996,7 +1131,9 @@
 				INFOPLIST_FILE = "Try_Laba_For_CatTests/Try_Laba_For_CatTests-Info.plist";
 				PRODUCT_NAME = InfinitySlotTests;
 				PROVISIONING_PROFILE = "17b8dc89-77ed-42b9-bfb3-725a2c7836fb";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfinitySlot.app/InfinitySlot";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;

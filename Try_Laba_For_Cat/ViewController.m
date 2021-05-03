@@ -170,9 +170,9 @@
 }
 
 - (GADInterstitial *)createAndLoadInterstitial {
-    GADInterstitial *interstitial = [[GADInterstitial alloc] init];
+    GADInterstitial *interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-2566742856382887/7028666298"];
 //    interstitial.adUnitID = @"ca-app-pub-2566742856382887/8779587052";
-    interstitial.adUnitID = @"ca-app-pub-3940256099942544/4411468910";
+//    interstitial.adUnitID = @"ca-app-pub-2566742856382887/5953668657";
     interstitial.delegate = self;
     [interstitial loadRequest:[GADRequest request]];
     return interstitial;
