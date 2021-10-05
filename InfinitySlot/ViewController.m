@@ -59,7 +59,9 @@
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
     scene.onGameOver = ^(int gameLevel, int gameTime){
-        [self gameOverWithLose:gameLevel withGameTime:gameTime];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self gameOverWithLose:gameLevel withGameTime:gameTime];
+        });
     };
     
     scene.showAdmob = ^(){

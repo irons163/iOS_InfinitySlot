@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		69CA96CDAF658886C2F33E9E /* Pods_InfinitySlotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC411956061E74EBC83A226 /* Pods_InfinitySlotTests.framework */; };
 		7842FF3478B09D8285FB1CFD /* Pods_InfinitySlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A020BD5498A38195603D6667 /* Pods_InfinitySlot.framework */; };
 		B53E30491B1AA17C00B7457E /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E58D641AE1C459009385F0 /* MyScene.m */; };
 		B53E304A1B1AA17C00B7457E /* MyADView.m in Sources */ = {isa = PBXBuildFile; fileRef = B57795181B01FCA000ABE278 /* MyADView.m */; };
@@ -74,19 +73,6 @@
 		B53E308C1B1AA17C00B7457E /* laba.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B53E303B1B1941D300B7457E /* laba.mp3 */; };
 		B53E308E1B1AA17C00B7457E /* m07.png in Resources */ = {isa = PBXBuildFile; fileRef = B5E58D921AE1C542009385F0 /* m07.png */; };
 		B53E308F1B1AA17C00B7457E /* m04.png in Resources */ = {isa = PBXBuildFile; fileRef = B5E58D8F1AE1C542009385F0 /* m04.png */; };
-		B55E95C71BC61971002E67EF /* unlimited_cat_world_ad.png in Resources */ = {isa = PBXBuildFile; fileRef = B55E95BA1BC61971002E67EF /* unlimited_cat_world_ad.png */; };
-		B55E95C81BC61971002E67EF /* UnlimitedCatWorld_ad.png in Resources */ = {isa = PBXBuildFile; fileRef = B55E95BB1BC61971002E67EF /* UnlimitedCatWorld_ad.png */; };
-		B55E95C91BC61971002E67EF /* ad1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B55E95BC1BC61971002E67EF /* ad1.jpg */; };
-		B55E95CA1BC61971002E67EF /* ad2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B55E95BD1BC61971002E67EF /* ad2.jpg */; };
-		B55E95CB1BC61971002E67EF /* ad3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B55E95BE1BC61971002E67EF /* ad3.jpg */; };
-		B55E95CC1BC61971002E67EF /* 2048_ad.png in Resources */ = {isa = PBXBuildFile; fileRef = B55E95BF1BC61971002E67EF /* 2048_ad.png */; };
-		B55E95CD1BC61971002E67EF /* Shoot_Learning_ad.png in Resources */ = {isa = PBXBuildFile; fileRef = B55E95C01BC61971002E67EF /* Shoot_Learning_ad.png */; };
-		B55E95CE1BC61971002E67EF /* cute_dudge_ad.png in Resources */ = {isa = PBXBuildFile; fileRef = B55E95C11BC61971002E67EF /* cute_dudge_ad.png */; };
-		B55E95CF1BC61971002E67EF /* cn_attack_on_gaint_cat_ad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B55E95C21BC61971002E67EF /* cn_attack_on_gaint_cat_ad.jpg */; };
-		B55E95D01BC61971002E67EF /* en_attack_on_gaint_cat_ad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B55E95C31BC61971002E67EF /* en_attack_on_gaint_cat_ad.jpg */; };
-		B55E95D11BC61971002E67EF /* jp_attack_on_gaint_cat_ad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B55E95C41BC61971002E67EF /* jp_attack_on_gaint_cat_ad.jpg */; };
-		B55E95D21BC61971002E67EF /* crazy_split_ad.png in Resources */ = {isa = PBXBuildFile; fileRef = B55E95C51BC61971002E67EF /* crazy_split_ad.png */; };
-		B55E95D31BC61971002E67EF /* HappyDownStages_AD.png in Resources */ = {isa = PBXBuildFile; fileRef = B55E95C61BC61971002E67EF /* HappyDownStages_AD.png */; };
 		B55E95E11BC61EFF002E67EF /* unlimited_cat_world_ad.png in Resources */ = {isa = PBXBuildFile; fileRef = B55E95BA1BC61971002E67EF /* unlimited_cat_world_ad.png */; };
 		B55E95E21BC61EFF002E67EF /* UnlimitedCatWorld_ad.png in Resources */ = {isa = PBXBuildFile; fileRef = B55E95BB1BC61971002E67EF /* UnlimitedCatWorld_ad.png */; };
 		B55E95E31BC61EFF002E67EF /* ad1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B55E95BC1BC61971002E67EF /* ad1.jpg */; };
@@ -100,15 +86,14 @@
 		B55E95EB1BC61EFF002E67EF /* jp_attack_on_gaint_cat_ad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B55E95C41BC61971002E67EF /* jp_attack_on_gaint_cat_ad.jpg */; };
 		B55E95EC1BC61EFF002E67EF /* crazy_split_ad.png in Resources */ = {isa = PBXBuildFile; fileRef = B55E95C51BC61971002E67EF /* crazy_split_ad.png */; };
 		B55E95ED1BC61EFF002E67EF /* HappyDownStages_AD.png in Resources */ = {isa = PBXBuildFile; fileRef = B55E95C61BC61971002E67EF /* HappyDownStages_AD.png */; };
-		B55E95EF1BC67201002E67EF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B55E95F21BC67201002E67EF /* Localizable.strings */; };
 		B55E95F01BC67201002E67EF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B55E95F21BC67201002E67EF /* Localizable.strings */; };
-		B55E96051BCC6E27002E67EF /* GameCenterUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B55E96041BCC6E27002E67EF /* GameCenterUtil.m */; };
 		B55E96061BCC6E27002E67EF /* GameCenterUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B55E96041BCC6E27002E67EF /* GameCenterUtil.m */; };
-		B55E96081BCC705C002E67EF /* leader_board_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B55E96071BCC705B002E67EF /* leader_board_btn.png */; };
 		B55E96091BCC705C002E67EF /* leader_board_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B55E96071BCC705B002E67EF /* leader_board_btn.png */; };
 		B5A1A5261BD70CE800F1C9AC /* btn_guide_hd.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D3DA1D1BD1FA3700E80F4F /* btn_guide_hd.png */; };
 		B5A1A5271BD715FE00F1C9AC /* HintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D3DA201BD1FADA00E80F4F /* HintViewController.m */; };
 		B5A1A5281BD7162C00F1C9AC /* hint.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D3DA221BD1FB9900E80F4F /* hint.png */; };
+		B5AF434F270A17FC00B2FD57 /* InfinitySlot-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5AF434D270A17FC00B2FD57 /* InfinitySlot-Info.plist */; };
+		B5AF4357270B48F000B2FD57 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5AF4356270B48F000B2FD57 /* GameKit.framework */; };
 		B5AFFC171B423A020062ABF7 /* frame.png in Resources */ = {isa = PBXBuildFile; fileRef = B5AFFC161B423A020062ABF7 /* frame.png */; };
 		B5AFFC191B423A110062ABF7 /* borad_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B5AFFC181B423A110062ABF7 /* borad_bg.png */; };
 		B5AFFC1E1B42471D0062ABF7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5AFFC1D1B42471D0062ABF7 /* CFNetwork.framework */; };
@@ -119,23 +104,7 @@
 		B5AFFC4D1B424A510062ABF7 /* AppiraterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5AFFC271B424A510062ABF7 /* AppiraterLocalizable.strings */; };
 		B5AFFC4E1B424A510062ABF7 /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = B5AFFC2A1B424A510062ABF7 /* CHANGELOG.md */; };
 		B5AFFC4F1B424A510062ABF7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = B5AFFC3F1B424A510062ABF7 /* README.md */; };
-		B5D3DA231BD1FB9900E80F4F /* hint.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D3DA221BD1FB9900E80F4F /* hint.png */; };
-		B5E58D701AE1C459009385F0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E58D6F1AE1C459009385F0 /* XCTest.framework */; };
-		B5E58D711AE1C459009385F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E58D491AE1C459009385F0 /* Foundation.framework */; };
-		B5E58D721AE1C459009385F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E58D4D1AE1C459009385F0 /* UIKit.framework */; };
-		B5E58D7A1AE1C459009385F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5E58D781AE1C459009385F0 /* InfoPlist.strings */; };
-		B5E58D7C1AE1C459009385F0 /* Try_Laba_For_CatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E58D7B1AE1C459009385F0 /* Try_Laba_For_CatTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B5C6154A263DA2DD00CFDD98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B5E58D3E1AE1C459009385F0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B53E30471B1AA17C00B7457E;
-			remoteInfo = InfinitySlot;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6BC411956061E74EBC83A226 /* Pods_InfinitySlotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InfinitySlotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,6 +161,9 @@
 		B592A7931AF6F3470014FC4C /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
 		B592A7951AF6F6090014FC4C /* TextureHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureHelper.h; sourceTree = "<group>"; };
 		B592A7961AF6F6090014FC4C /* TextureHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureHelper.m; sourceTree = "<group>"; };
+		B5AF434D270A17FC00B2FD57 /* InfinitySlot-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "InfinitySlot-Info.plist"; sourceTree = "<group>"; };
+		B5AF434E270A17FC00B2FD57 /* InfinitySlot-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "InfinitySlot-Prefix.pch"; sourceTree = "<group>"; };
+		B5AF4356270B48F000B2FD57 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		B5AFFC161B423A020062ABF7 /* frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame.png; sourceTree = "<group>"; };
 		B5AFFC181B423A110062ABF7 /* borad_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = borad_bg.png; sourceTree = "<group>"; };
 		B5AFFC1D1B42471D0062ABF7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -243,10 +215,8 @@
 		B5E58D4B1AE1C459009385F0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B5E58D4D1AE1C459009385F0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B5E58D4F1AE1C459009385F0 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		B5E58D531AE1C459009385F0 /* Try_Laba_For_Cat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Try_Laba_For_Cat-Info.plist"; sourceTree = "<group>"; };
 		B5E58D551AE1C459009385F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B5E58D571AE1C459009385F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B5E58D591AE1C459009385F0 /* Try_Laba_For_Cat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Try_Laba_For_Cat-Prefix.pch"; sourceTree = "<group>"; };
 		B5E58D5A1AE1C459009385F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B5E58D5B1AE1C459009385F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B5E58D5E1AE1C459009385F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -256,11 +226,7 @@
 		B5E58D641AE1C459009385F0 /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
 		B5E58D661AE1C459009385F0 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		B5E58D681AE1C459009385F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B5E58D6E1AE1C459009385F0 /* InfinitySlotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfinitySlotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E58D6F1AE1C459009385F0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		B5E58D771AE1C459009385F0 /* Try_Laba_For_CatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Try_Laba_For_CatTests-Info.plist"; sourceTree = "<group>"; };
-		B5E58D791AE1C459009385F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B5E58D7B1AE1C459009385F0 /* Try_Laba_For_CatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Try_Laba_For_CatTests.m; sourceTree = "<group>"; };
 		B5E58D8C1AE1C542009385F0 /* m01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m01.png; sourceTree = "<group>"; };
 		B5E58D8D1AE1C542009385F0 /* m02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m02.png; sourceTree = "<group>"; };
 		B5E58D8E1AE1C542009385F0 /* m03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m03.png; sourceTree = "<group>"; };
@@ -308,6 +274,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5AF4357270B48F000B2FD57 /* GameKit.framework in Frameworks */,
 				B5AFFC201B42472B0062ABF7 /* SystemConfiguration.framework in Frameworks */,
 				B5AFFC1E1B42471D0062ABF7 /* CFNetwork.framework in Frameworks */,
 				B53E30561B1AA17C00B7457E /* StoreKit.framework in Frameworks */,
@@ -316,17 +283,6 @@
 				B53E305A1B1AA17C00B7457E /* SpriteKit.framework in Frameworks */,
 				B53E305B1B1AA17C00B7457E /* Foundation.framework in Frameworks */,
 				7842FF3478B09D8285FB1CFD /* Pods_InfinitySlot.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5E58D6B1AE1C459009385F0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B5E58D701AE1C459009385F0 /* XCTest.framework in Frameworks */,
-				B5E58D721AE1C459009385F0 /* UIKit.framework in Frameworks */,
-				B5E58D711AE1C459009385F0 /* Foundation.framework in Frameworks */,
-				69CA96CDAF658886C2F33E9E /* Pods_InfinitySlotTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,8 +326,7 @@
 		B5E58D3D1AE1C459009385F0 = {
 			isa = PBXGroup;
 			children = (
-				B5E58D511AE1C459009385F0 /* Try_Laba_For_Cat */,
-				B5E58D751AE1C459009385F0 /* Try_Laba_For_CatTests */,
+				B5E58D511AE1C459009385F0 /* InfinitySlot */,
 				B5E58D481AE1C459009385F0 /* Frameworks */,
 				B5E58D471AE1C459009385F0 /* Products */,
 				29D2C82C883FAD94BA706B54 /* Pods */,
@@ -381,7 +336,6 @@
 		B5E58D471AE1C459009385F0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B5E58D6E1AE1C459009385F0 /* InfinitySlotTests.xctest */,
 				B53E30931B1AA17C00B7457E /* InfinitySlot.app */,
 			);
 			name = Products;
@@ -390,6 +344,7 @@
 		B5E58D481AE1C459009385F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5AF4356270B48F000B2FD57 /* GameKit.framework */,
 				B5AFFC1F1B42472B0062ABF7 /* SystemConfiguration.framework */,
 				B5AFFC1D1B42471D0062ABF7 /* CFNetwork.framework */,
 				B53E303F1B19C6EE00B7457E /* StoreKit.framework */,
@@ -404,7 +359,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B5E58D511AE1C459009385F0 /* Try_Laba_For_Cat */ = {
+		B5E58D511AE1C459009385F0 /* InfinitySlot */ = {
 			isa = PBXGroup;
 			children = (
 				B5AFFC1A1B4243C30062ABF7 /* ThirdParty */,
@@ -443,35 +398,17 @@
 				B5E58D681AE1C459009385F0 /* Images.xcassets */,
 				B5E58D521AE1C459009385F0 /* Supporting Files */,
 			);
-			path = Try_Laba_For_Cat;
+			path = InfinitySlot;
 			sourceTree = "<group>";
 		};
 		B5E58D521AE1C459009385F0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B5E58D531AE1C459009385F0 /* Try_Laba_For_Cat-Info.plist */,
+				B5AF434D270A17FC00B2FD57 /* InfinitySlot-Info.plist */,
+				B5AF434E270A17FC00B2FD57 /* InfinitySlot-Prefix.pch */,
 				B5E58D541AE1C459009385F0 /* InfoPlist.strings */,
 				B5E58D571AE1C459009385F0 /* main.m */,
-				B5E58D591AE1C459009385F0 /* Try_Laba_For_Cat-Prefix.pch */,
 				B55E95F21BC67201002E67EF /* Localizable.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B5E58D751AE1C459009385F0 /* Try_Laba_For_CatTests */ = {
-			isa = PBXGroup;
-			children = (
-				B5E58D7B1AE1C459009385F0 /* Try_Laba_For_CatTests.m */,
-				B5E58D761AE1C459009385F0 /* Supporting Files */,
-			);
-			path = Try_Laba_For_CatTests;
-			sourceTree = "<group>";
-		};
-		B5E58D761AE1C459009385F0 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B5E58D771AE1C459009385F0 /* Try_Laba_For_CatTests-Info.plist */,
-				B5E58D781AE1C459009385F0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -565,25 +502,6 @@
 			productReference = B53E30931B1AA17C00B7457E /* InfinitySlot.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B5E58D6D1AE1C459009385F0 /* InfinitySlotTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B5E58D821AE1C459009385F0 /* Build configuration list for PBXNativeTarget "InfinitySlotTests" */;
-			buildPhases = (
-				8C364254300928402CEA2B7A /* [CP] Check Pods Manifest.lock */,
-				B5E58D6A1AE1C459009385F0 /* Sources */,
-				B5E58D6B1AE1C459009385F0 /* Frameworks */,
-				B5E58D6C1AE1C459009385F0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B5C6154B263DA2DD00CFDD98 /* PBXTargetDependency */,
-			);
-			name = InfinitySlotTests;
-			productName = Try_Laba_For_CatTests;
-			productReference = B5E58D6E1AE1C459009385F0 /* InfinitySlotTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -596,11 +514,6 @@
 					B53E30471B1AA17C00B7457E = {
 						DevelopmentTeam = T6VV6T753H;
 						ProvisioningStyle = Automatic;
-					};
-					B5E58D6D1AE1C459009385F0 = {
-						DevelopmentTeam = T6VV6T753H;
-						ProvisioningStyle = Automatic;
-						TestTargetID = B53E30471B1AA17C00B7457E;
 					};
 				};
 			};
@@ -649,7 +562,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B5E58D6D1AE1C459009385F0 /* InfinitySlotTests */,
 				B53E30471B1AA17C00B7457E /* InfinitySlot */,
 			);
 		};
@@ -708,6 +620,7 @@
 				B53E307E1B1AA17C00B7457E /* m06.png in Resources */,
 				B53E307F1B1AA17C00B7457E /* Main.storyboard in Resources */,
 				B53E30801B1AA17C00B7457E /* m03.png in Resources */,
+				B5AF434F270A17FC00B2FD57 /* InfinitySlot-Info.plist in Resources */,
 				B53E30811B1AA17C00B7457E /* m20.png in Resources */,
 				B53E30821B1AA17C00B7457E /* m21.png in Resources */,
 				B53E30831B1AA17C00B7457E /* ic_launcher.png in Resources */,
@@ -733,30 +646,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5E58D6C1AE1C459009385F0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B55E95CC1BC61971002E67EF /* 2048_ad.png in Resources */,
-				B55E95D21BC61971002E67EF /* crazy_split_ad.png in Resources */,
-				B5D3DA231BD1FB9900E80F4F /* hint.png in Resources */,
-				B55E95CB1BC61971002E67EF /* ad3.jpg in Resources */,
-				B55E95D11BC61971002E67EF /* jp_attack_on_gaint_cat_ad.jpg in Resources */,
-				B55E95C71BC61971002E67EF /* unlimited_cat_world_ad.png in Resources */,
-				B55E95CE1BC61971002E67EF /* cute_dudge_ad.png in Resources */,
-				B55E95CD1BC61971002E67EF /* Shoot_Learning_ad.png in Resources */,
-				B5E58D7A1AE1C459009385F0 /* InfoPlist.strings in Resources */,
-				B55E95C81BC61971002E67EF /* UnlimitedCatWorld_ad.png in Resources */,
-				B55E95D31BC61971002E67EF /* HappyDownStages_AD.png in Resources */,
-				B55E95D01BC61971002E67EF /* en_attack_on_gaint_cat_ad.jpg in Resources */,
-				B55E95CA1BC61971002E67EF /* ad2.jpg in Resources */,
-				B55E95EF1BC67201002E67EF /* Localizable.strings in Resources */,
-				B55E95C91BC61971002E67EF /* ad1.jpg in Resources */,
-				B55E96081BCC705C002E67EF /* leader_board_btn.png in Resources */,
-				B55E95CF1BC61971002E67EF /* cn_attack_on_gaint_cat_ad.jpg in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -776,28 +665,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-InfinitySlot-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8C364254300928402CEA2B7A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-InfinitySlotTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -851,24 +718,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5E58D6A1AE1C459009385F0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B55E96051BCC6E27002E67EF /* GameCenterUtil.m in Sources */,
-				B5E58D7C1AE1C459009385F0 /* Try_Laba_For_CatTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B5C6154B263DA2DD00CFDD98 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B53E30471B1AA17C00B7457E /* InfinitySlot */;
-			targetProxy = B5C6154A263DA2DD00CFDD98 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B55E95F21BC67201002E67EF /* Localizable.strings */ = {
@@ -942,14 +792,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		B5E58D781AE1C459009385F0 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B5E58D791AE1C459009385F0 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -959,8 +801,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1.2105030;
 				DEVELOPMENT_TEAM = T6VV6T753H;
@@ -969,12 +811,13 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Try_Laba_For_Cat/Try_Laba_For_Cat-Prefix.pch";
-				INFOPLIST_FILE = "Try_Laba_For_Cat/Try_Laba_For_Cat-Info.plist";
+				GCC_PREFIX_HEADER = "InfinitySlot/InfinitySlot-Prefix.pch";
+				INFOPLIST_FILE = "InfinitySlot/InfinitySlot-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.irons.InfinitySlot;
 				PRODUCT_NAME = InfinitySlot;
-				PROVISIONING_PROFILE = "17b8dc89-77ed-42b9-bfb3-725a2c7836fb";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
@@ -987,8 +830,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1.2105030;
 				DEVELOPMENT_TEAM = T6VV6T753H;
@@ -997,12 +840,13 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Try_Laba_For_Cat/Try_Laba_For_Cat-Prefix.pch";
-				INFOPLIST_FILE = "Try_Laba_For_Cat/Try_Laba_For_Cat-Info.plist";
+				GCC_PREFIX_HEADER = "InfinitySlot/InfinitySlot-Prefix.pch";
+				INFOPLIST_FILE = "InfinitySlot/InfinitySlot-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.irons.InfinitySlot;
 				PRODUCT_NAME = InfinitySlot;
-				PROVISIONING_PROFILE = "17b8dc89-77ed-42b9-bfb3-725a2c7836fb";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
@@ -1082,62 +926,6 @@
 			};
 			name = Release;
 		};
-		B5E58D831AE1C459009385F0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C3070F925E4AB193033C3C1 /* Pods-InfinitySlotTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T6VV6T753H;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Try_Laba_For_Cat/Try_Laba_For_Cat-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Try_Laba_For_CatTests/Try_Laba_For_CatTests-Info.plist";
-				PRODUCT_NAME = InfinitySlotTests;
-				PROVISIONING_PROFILE = "17b8dc89-77ed-42b9-bfb3-725a2c7836fb";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfinitySlot.app/InfinitySlot";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		B5E58D841AE1C459009385F0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7333B7296DE8D72F09535991 /* Pods-InfinitySlotTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T6VV6T753H;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Try_Laba_For_Cat/Try_Laba_For_Cat-Prefix.pch";
-				INFOPLIST_FILE = "Try_Laba_For_CatTests/Try_Laba_For_CatTests-Info.plist";
-				PRODUCT_NAME = InfinitySlotTests;
-				PROVISIONING_PROFILE = "17b8dc89-77ed-42b9-bfb3-725a2c7836fb";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfinitySlot.app/InfinitySlot";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1155,15 +943,6 @@
 			buildConfigurations = (
 				B5E58D7D1AE1C459009385F0 /* Debug */,
 				B5E58D7E1AE1C459009385F0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B5E58D821AE1C459009385F0 /* Build configuration list for PBXNativeTarget "InfinitySlotTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B5E58D831AE1C459009385F0 /* Debug */,
-				B5E58D841AE1C459009385F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

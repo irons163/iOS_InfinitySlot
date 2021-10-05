@@ -35,7 +35,7 @@
             startingLineNumber = "45"
             endingLineNumber = "45"
             landmarkName = "+backgroundMusicPlayerStop"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -52,7 +52,7 @@
             startingLineNumber = "49"
             endingLineNumber = "49"
             landmarkName = "+backgroundMusicPlayerPause"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
