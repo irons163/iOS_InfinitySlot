@@ -38,5 +38,6 @@ https://www.facebook.com/pages/%E6%9B%B8%E7%95%AB%E5%89%B5%E4%BD%9C%E5%88%86%E4%
 ```
 
 ## Screentshots
+| Page 01 | Page 02 |
 |:--:|:--:|
-|![](ScreenShots/01.jpg)|![](ScreenShots/02.jpg)|
+|![](ScreenShots/01.png)|![](ScreenShots/02.png)|
