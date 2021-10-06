@@ -6,7 +6,7 @@
 - iOS_InfinitySlot is a Slot Machine Simulation game in iOS.
 
 ## Important!
-### You can use the codes to do what you want, instead the images and musics.
+### You can use the codes to do what you want, instead of using the images and musics.
 
 ## Description
 
